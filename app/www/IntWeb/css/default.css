@@ -1,0 +1,463 @@
+body {
+    text-align: center;
+}
+
+.login {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+}
+
+h2 {
+    display: inline;
+    text-align: left;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.required_notification,
+#errorMessages {
+    font-size: 14px;
+    color: #ff0000;
+    margin: 5px 0 0 0;
+}
+
+.required_notification {
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+
+#errorMessages {
+    clear: both;
+    padding: 10px 0 0 0;
+}
+
+#frmCadastro {
+    margin-bottom: 0px;
+}
+
+#frmLogin {
+    border-bottom: 1px solid #777;
+}
+
+#frmCadastro {
+    text-align: center;
+}
+
+#frmLogin ul,
+#frmCadastro ul {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+}
+
+#frmLogin li {
+    padding: 12px;
+}
+
+#frmCadastro li {
+    padding: 12px;
+}
+
+#frmCadastro input[type="text"],
+#frmCadastro textarea {
+    float: left;
+}
+#myModal{  
+  height: 100%;
+  overflow: auto !important;
+}
+#myModal3 textarea {
+    width: 100%;
+}
+
+label {
+    text-align: left;
+    width: 150px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+}
+
+input[type="text"],
+input[type="password"] {
+    /* width: 80%;
+    padding: 5px 8px;*/
+}
+
+textarea {
+    /*width: 80%;
+    padding: 5px 8px;*/
+}
+
+input[type="text"]#txtDataExec {
+    /* width: 100px;*/
+}
+
+.clr {
+    clear: both;
+}
+
+input[type="button"],
+input[type="submit"],
+{
+    /* width: 100px;
+    padding: 5px 8px;*/
+}
+
+#tblLista {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+#tblLista td,
+#tblLista th {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+#tblLista thead th {
+    border-bottom: 2px solid #ccc;
+}
+
+#tblLista tbody tr td:first-child {
+    width: 10%;
+}
+
+#tblLista tbody tr td:last-child {
+    width: 15%;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+.pointer{
+  cursor: pointer;
+}
+
+.btnSearch,
+.btnShowPass {
+    margin: 0 10px;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.btnShowPass {
+    margin-top: 36px;
+    background-image: url("../img/view.png");
+}
+
+.btnShowPass.close {
+    background-image: url("../img/viewClose.png");
+}
+
+.btnLogoff {
+    margin-left: 10px;
+    float: right;
+}
+
+input.required,
+textarea.required {
+    border: solid 1px #ff0000;
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+}
+
+.actions {
+    clear: both;
+    border-top: 1px solid #777;
+    padding-top: 20px;
+}
+
+.search {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+.search label {
+    width: 80px;
+    float: none;
+}
+
+.search #txtPesquisa {
+    width: 250px;
+    display: inline-block;
+}
+
+.newItem {
+    float: left;
+    margin: 6px;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+    margin-top: 0px!important;
+    margin-bottom: 10px!important;
+}
+/*------------------------------------------------------------------------
+  # Formulário
+  # ------------------------------------------------------------------------
+  # Estilo para os formulários
+  -------------------------------------------------------------------------*/ 
+
+.btn-file {
+    padding: 6px 12px!important;
+}
+
+.fileupload {
+    height: auto;
+}
+
+.btnEdit .glyphicon,
+.btnDelete .glyphicon,
+#btnNew .glyphicon,
+#btnNewCategory .glyphicon,
+#btnNewSubcategory .glyphicon {
+    padding-right: 5px;
+    color: #ffffff!important;
+}
+
+.btnEdit,
+.btnDelete,
+#btnNew {
+    font-weight: bold!important;
+}
+
+.btnEdit {
+    margin-right: 10px;
+}
+
+#btnNewCategory,
+#btnNewSubcategory {
+    position: absolute;
+    float: right;
+    right: 20px;
+}
+
+pre {
+    text-align: initial;
+    height: 50%;
+}
+
+#checkHidden {
+    float: left!important;
+}
+
+.title {
+    //color: #1c90cc!important;
+}
+
+.btn.btn-round {
+  border-radius: 30px;
+}
+
+.btn.btn-fab,
+.btn.btn-just-icon {
+  font-size: 24px;
+  height: 41px;
+  min-width: 41px;
+  width: 41px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  line-height: 41px;
+}
+
+.btn.btn-fab.btn-round,
+.btn.btn-just-icon.btn-round {
+  border-radius: 50%;
+}
+.btnLogoff.btn .material-icons,
+.btnLogoff.btn:not(.btn-just-icon):not(.btn-fab) .fa {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  vertical-align: middle;
+}
+.btn-file>input, .fileupload {
+  display: none;
+}
+
+.sidebar{
+  background: aqua;
+  display: block;
+  width: 100%;
+}
+#scroller{
+  margin-top:10px;
+  width: 100%;
+}
+
+#scroller{
+  background:#fff;
+  border-bottom: solid 1px #000;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 10px 100px;
+  margin: 0px;
+  //opacity: .9;
+}
+#scroller thead{
+  width: 100%;
+  display: inline-block;
+}
+#scroller thead th{
+  width: 30%;
+}
+#scroller thead tr th:first-child  {
+  width: 10%;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  #btnNewCategory, #btnNewSubcategory{
+    position: initial;
+  }
+  label[for=categoria],label[for=subcategoria]{
+    width: 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .form-group{
+    margin: 0px 0px 4px 0px;
+  }
+  .form-group label{
+    margin: 0px;
+    padding: 2px;
+  }
+
+  .btn-file>input {
+    position: relative;
+    top: initial;
+    right: initial;
+    margin: 0;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    transform: translate(-300px, 0) scale(4);
+    font-size: 4px;
+    direction: ltr;
+    cursor: pointer;
+  }
+
+  #fileInput, .fileupload-new, .btn-file{
+    height: 34px;
+  }
+  .btnLogoff{
+    margin: 0px;
+  }
+  .fileupload{
+    width: 50px;
+  }
+  .btn-file {
+    padding: 0px!important;
+  }
+  .btnLogoff span:not(.ignoreCss){
+    font-size: 0px;        
+  }
+  .search {
+    clear: both;
+    width: 100%;
+  }
+
+  .search #txtPesquisa{
+    width: 200px;
+  }
+  
+  .modal-content{
+    overflow: auto;
+    top: 20px;
+  }
+  .h1, .h2, .h3, h1, h2, h3{
+    margin: 10px!important;    
+  }
+  .h2, h2{
+    font-size: 20px;
+  }
+  #tblLista button{
+    margin: 0px;
+  }
+  #tblLista {
+    font-size:12px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  #tblLista td,
+  #tblLista th {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  #tblLista thead th {
+    border-bottom: 2px solid #ccc;
+  }
+
+  #tblLista td,   #tblLista th{
+    white-space: nowrap;    
+    overflow: hidden;
+    text-overflow:ellipsis;
+    width: 30%;    
+    display: inline-block;
+  }
+  #tblLista th{
+    width: 28%;    
+  }
+
+  #tblLista, #tblLista tr, #tblLista thead,  #tblLista tbody{
+    display: inline-block;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;     
+  }
+  
+  #tblLista tr td, #tblLista tr th{
+    display: inline-block;        
+  }
+
+  #tblLista tbody tr td:nth-child(4),   #tblLista thead tr th:nth-child(4) , #scroller tr th:nth-child(4){
+    display: none;
+  }
+  #scroller thead th{
+    width: 40%;
+  }
+
+  #tblLista tbody tr td:first-child, #tblLista thead tr th:first-child  {
+    width: 10%;
+  }
+
+  #tblLista tbody tr td:last-child, #tblLista thead tr th:last-child {
+    width: 30%;
+  }
+  #scroller{
+    padding: 0 20px 20px;
+  }
+}

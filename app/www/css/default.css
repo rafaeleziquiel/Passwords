@@ -1,0 +1,431 @@
+#app{
+  display: none;
+}
+.column{
+  display: none;
+}
+#upload {
+    display: none;
+}
+
+#actions {
+    display: none;
+}
+
+.main {
+    /*display: none;*/
+}
+
+footer {
+    /* display: none;*/
+}
+
+hr {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.jscolor{
+  text-align:center;
+  border:solid 1px #00bbff;
+}
+
+.grey {
+    background: rgb(245, 245, 245);
+}
+/* Transparency Header */
+.header-filter.light:before{
+  background: rgba(0, 0, 0, 0);
+}
+.header-filter.light-normal:before {
+  background: rgba(0, 0, 0, 0.25);
+}
+.header-filter.normal:before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-filter.normal-heavy:before {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.header-filter.heavy:before {
+  background: rgba(0, 0, 0, 1);
+}
+
+.slider{
+  margin-bottom: 30px;
+}
+
+.list-group {
+    background: #fff;
+}
+.card{
+  cursor: pointer;
+}
+.pointer{
+  cursor: pointer;
+}
+.card button{
+  margin-right: 10px;
+}
+.card.disabled{
+  border: solid 2px #9083ff;
+}
+.card-body {
+    padding: 0px;
+}
+.modal-body h6 span{
+  text-transform: initial;
+}
+.credentialsPass{
+  padding: 0px;  
+}
+.credentialsPass li{
+  display: inline;
+  float: left;
+}
+.credentialsPass h6{
+  margin: 0px;
+}
+.clr{
+  clear: both;
+}
+.eye{
+  background-image:url('../img/view.png');
+  background-size: 20px auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.eyeClosed{
+  background-image:url('../img/viewClose.png');
+}
+#pass{
+  border: none;
+  background: none;
+}
+#toast-container > div{
+  opacity: 1;
+  padding:8px;
+  text-align: center;
+}
+#toast-container > div:before{
+  float: left;
+  font-family: "Material Icons"; 
+}
+
+#toast-container > div.toast-info:before{
+  content: "info_outline";  
+}
+#toast-container > div.toast-warning:before{
+  content: "warning";  
+}
+#toast-container > div.toast-error:before{
+  content: "error";  
+}
+#toast-container > div.toast-success:before{
+  content: "check";  
+}
+
+.list-group-item {
+    padding: 10px;
+}
+
+ons-splitter-mask {
+    background: none!important;
+}
+
+#leftSplitter {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px 0px;
+    border-right: 1px solid #ddd;
+}
+
+ons-list-item,
+ons-fab {
+    cursor: pointer;
+}
+
+.item .animated {
+    opacity: 0;
+    left: 100%;
+    position: relative;
+}
+
+.bmd-form-group .bmd-label-floating,
+.bmd-form-group .bmd-label-placeholder {
+    top: 1rem;
+}
+
+.bmd-form-group.is-focused .bmd-label-floating,
+.bmd-form-group.is-filled .bmd-label-floating {
+    top: -0.1rem;
+    left: 0;
+    font-size: 0.6875rem;
+}
+
+.list-group .desc {
+    float: left;
+}
+
+.list-group .copy {
+    float: right;
+}
+.btnCopy{      
+  font-weight: bold;
+  margin-right: 10px;
+}
+/*FIX Search Form*/
+#searchText {
+    color: #aaa;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+.navbar form .bmd-form-group {
+  margin: 5px 10px;
+}
+
+.navbar form .bmd-form-group label{
+  float: left;
+}
+
+.navbar form .bmd-form-group #searchText{
+  float: left;
+  width:70%;
+}
+
+.navbar form .bmd-form-group #search{
+  float: right;
+}
+
+.navbar-nav{
+  width: 100%;
+}
+
+.ml-auto, .mx-auto{
+  margin: 0 auto!important;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        width: 200px;
+    }
+}
+
+/* Material Dashboard */
+.fixed-plugin .badge{
+  border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 23px;
+    margin-right: 5px;
+    position: relative;
+    width: 23px;
+    padding: 8px;
+}
+
+.fixed-plugin{
+  position: relative;
+  top: inherit;
+  right: inherit;
+  width: inherit;
+  background:inherit;
+}
+
+/*Backgrounds*/
+.fixed-plugin .img-holder{
+    border-radius: 10px;
+    background-color: #FFF;
+    border: 3px solid #FFF;
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+    height: 100px;
+    overflow: hidden;
+    padding: 0;
+    min-width: 20%;    
+  }
+  .fixed-plugin  img{
+    height: 100%;
+  }
+
+  .fixed-plugin li:hover>a.img-holder,
+.fixed-plugin >li:focus>a.img-holder {
+  border-color: rgba(0, 187, 255, 0.53);
+}
+
+.fixed-plugin >.active>a.img-holder,
+.fixed-plugin >.active>a.img-holder {
+  border-color: #00bbff;
+  background-color: #FFFFFF;
+}
+
+
+.fixed-plugin li {
+  display: block;
+  padding: 18px 2px;
+  width: 20%;
+  float: left;
+}
+/* Material Dashboard */
+
+
+/*BEGIN OnScreen
+.list-item {
+  opacity: 0;  
+  -webkit-transition: opacity 500ms, transform 500ms;
+  -moz-transition: opacity 500ms, transform 500ms;
+  transition: opacity 500ms, transform 500ms;
+}
+.list-item.onScreen {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+/*END OnScreen*/
+
+
+/*
+.page__content > div {    
+    height: 40vh;
+
+}
+.page__content > .lazy-list {
+    overflow-y: scroll;
+}*/
+
+
+/*.lazy-list{
+    height: 50%!important;
+    overflow: auto;
+}*/
+
+
+/*
+.item {
+  opacity: 0;
+  
+  -webkit-transform: translate(50%, 0);
+  -moz-transform: translate(50%, 0);
+  -ms-transform: translate(50%, 0);
+  -o-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  -webkit-transition: opacity 500ms, transform 500ms;
+  -moz-transition: opacity 500ms, transform 500ms;
+  transition: opacity 250ms, transform 500ms;
+}
+.item.onScreen {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}*/
+
+
+.columns,
+.column {
+    height: 100%;
+    overflow: auto;
+}
+/**********************************DEFAULT COLOR*****************************/
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+    background-color: #6c757d;
+}
+.togglebutton label input[type=checkbox].btn-color:checked+.toggle{
+  background-color: #000000;
+}
+.togglebutton label input[type=checkbox].btn-color:checked+.toggle:after{
+  border-color: #6c757d;
+}
+/**********************************PRIMARY COLOR*****************************/
+.dropdown-menu.text-primary .dropdown-item:hover.dropdown-menu.text-primary .dropdown-item:focus,
+.dropdown-menu.text-primary .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-primary:checked+.toggle {
+    background-color: #9c27b0;
+}
+.togglebutton label input[type=checkbox].btn-primary:checked+.toggle:after{
+  border-color: #9c27b0;
+}
+/**********************************INFO COLOR*****************************/
+.dropdown-menu.text-info .dropdown-item:hover,
+.dropdown-menu.text-info .dropdown-item:focus,
+.dropdown-menu.text-info .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-info:checked+.toggle{
+    background-color: #00bcd4;
+}
+.togglebutton label input[type=checkbox].btn-info:checked+.toggle:after{
+  border-color: #00bcd4;
+}
+/**********************************SUCCESS COLOR*****************************/
+.dropdown-menu.text-success .dropdown-item:hover,
+.dropdown-menu.text-success .dropdown-item:focus,
+.dropdown-menu.text-success .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-success:checked+.toggle {
+    background-color: #4caf50;
+}
+.togglebutton label input[type=checkbox].btn-success:checked+.toggle:after{
+  border-color: #4caf50;
+}
+/**********************************WARNING COLOR*****************************/
+.dropdown-menu.text-warning .dropdown-item:hover,
+.dropdown-menu.text-warning .dropdown-item:focus,
+.dropdown-menu.text-warning .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-warning:checked+.toggle {
+    background-color: #ff9800;
+}
+.togglebutton label input[type=checkbox].btn-warning:checked+.toggle:after{
+  border-color: #ff9800;
+}
+/**********************************DANGE COLOR*****************************/
+.dropdown-menu.text-danger .dropdown-item:hover,
+.dropdown-menu.text-danger .dropdown-item:focus,
+.dropdown-menu.text-danger .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-danger:checked+.toggle {
+    background-color: #f44336;
+}
+.togglebutton label input[type=checkbox].btn-danger:checked+.toggle:after{
+  border-color: #f44336;
+}
+/**********************************ROSE COLOR*****************************/
+.dropdown-menu.text-rose .dropdown-item:hover,
+.dropdown-menu.text-rose .dropdown-item:focus,
+.dropdown-menu.text-rose .dropdown-item.active,
+.togglebutton label input[type=checkbox].btn-rose:checked+.toggle {
+    background-color: #e91e63;
+}
+.togglebutton label input[type=checkbox].btn-rose:checked+.toggle:after{
+  border-color: #e91e63;
+}
+
+/*------------------------------------------------------------------------
+# MODAL
+# ------------------------------------------------------------------------
+# CSS para o modal
+-------------------------------------------------------------------------*/
+.modal.fade .modal-dialog {
+  transition: none!important;
+  transform: none!important;
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+/*
+.modal-backdrop.fade {
+  opacity: 1;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+}
+*/
+

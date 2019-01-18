@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<td><label>Title:</label></td>
+		<td><input type="text" id="title" style="width:80%" /></td>
+	</tr>
+	<tr>
+		<td><label>Desc:</label></td>
+		<td><input type="text" id="desc" style="width:80%" /></td>
+	</tr>
+	<tr>
+		<td><label>Link:</label></td>
+		<td><input type="text" id="link" style="width:80%" /></td>
+	</tr>
+	<tr>
+		<td><label>Login:</label></td>
+		<td><input type="text" id="login" style="width:80%" /></td>
+	</tr>
+	<tr>
+		<td><label>Pass:</label></td>
+		<td><input type="text" id="pass" style="width:80%" /></td>
+	</tr>
+</table>

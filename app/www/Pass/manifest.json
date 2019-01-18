@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Password Chamber",
+  "version": "1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "minimum_chrome_version": "28"
+}

@@ -1,0 +1,19 @@
+svg {
+  width: 30px;
+  //position: absolute;
+  //top: 50%;
+  //transform: translateY(-50%) translateX(-50%);
+ // left: 50%;
+  //right: 0;
+  z-index: 2000;
+  position: fixed;
+}
+
+.check {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  
+}

@@ -1,0 +1,526 @@
+p,
+h1,
+.jumbotron .h1,
+.jumbotron h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 40px!important;
+}
+
+#top {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: aqua;
+}
+
+#items {
+    overflow: auto;
+    //width:5000px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#items .image {
+    background-color: #fff;
+}
+
+.active h2 {
+    color: #1f9bf7!important;
+}
+
+.entry {
+    padding-top: 40px;
+    //float:left;
+    width: 180px;
+    display: table-cell;
+}
+
+#items a {
+    color: #1f9bf7;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#items a:hover {
+    color: #32d018;
+}
+
+.glyphicon {
+    color: #1c90cc!important;
+}
+
+.btn-default:hover {
+    background-color: #effffc!important;
+}
+
+.popover-content {
+    position: relative!important;
+}
+
+.popover h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif!important;
+    text-align: center;
+    color: #006ab7;
+}
+
+#items.color .entry h1,
+#items.color .entry h4 {
+    color: #fff;
+}
+
+.jumbotron {
+    padding: 0px!important;
+}
+
+.entry {
+    padding: 35 px 0 0 60px!important;
+}
+
+
+/*--------------------------------------------UPLOAD-------------------------------------------------*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn-file {
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.btn-file>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate(-300px, 0) scale(4);
+    font-size: 23px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.fileupload {
+    margin-bottom: 9px;
+}
+
+.fileupload .uneditable-input {
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    cursor: text;
+}
+
+.fileupload .thumbnail {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fileupload .thumbnail>img {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 100%;
+}
+
+.fileupload .btn {
+    vertical-align: middle;
+}
+
+.fileupload-exists .fileupload-new,
+.fileupload-new .fileupload-exists {
+    display: none;
+}
+
+.fileupload-inline .fileupload-controls {
+    display: inline;
+}
+
+.fileupload-new .input-append .btn-file {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.thumbnail-borderless .thumbnail {
+    border: none;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.fileupload-new.thumbnail-borderless .thumbnail {
+    border: 1px solid #ddd;
+}
+
+.control-group.warning .fileupload .uneditable-input {
+    color: #a47e3c;
+    border-color: #a47e3c;
+}
+
+.control-group.warning .fileupload .fileupload-preview {
+    color: #a47e3c;
+}
+
+.control-group.warning .fileupload .thumbnail {
+    border-color: #a47e3c;
+}
+
+.control-group.error .fileupload .uneditable-input {
+    color: #b94a48;
+    border-color: #b94a48;
+}
+
+.control-group.error .fileupload .fileupload-preview {
+    color: #b94a48;
+}
+
+.control-group.error .fileupload .thumbnail {
+    border-color: #b94a48;
+}
+
+.control-group.success .fileupload .uneditable-input {
+    color: #468847;
+    border-color: #468847;
+}
+
+.control-group.success .fileupload .fileupload-preview {
+    color: #468847;
+}
+
+.control-group.success .fileupload .thumbnail {
+    border-color: #468847;
+}
+
+
+/*--------------------------------------------UPLOAD-------------------------------------------------*/
+
+.fileupload {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.btn-file {
+    padding: 15px!important;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+.glyphicon {
+    color: #fff;
+}
+
+.container {
+    margin: 10px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+    color: #818a91;
+}
+
+.navbar-collapse .text-muted {
+    color: #818a91;
+}
+
+.about {
+    float: left;
+    max-width: 30rem;
+    margin-right: 3rem;
+}
+
+.social a {
+    font-weight: 500;
+    color: #eceeef;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+.modal {
+    overflow: initial!important;
+}
+
+.modal h2 {
+    text-align: center;
+    color: #1f9bf7;
+    margin-top: 10px;
+}
+
+.modal strong {
+    color: #1f9bf7;
+}
+
+.album {
+    min-height: 50rem;
+    /* Can be removed; just added for demo purposes */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f7f7f7;
+}
+
+.entry h2 {
+    font-size: 20px;
+    color: #ccc;
+    border-bottom: solid 1px #ccc;
+    //	font-weight:lighter;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card {
+    float: left;
+    padding: .95rem;
+    margin-bottom: 0px;
+    border: 0;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px #fff;
+}
+
+.hideOn {
+    display: none;
+}
+
+.dropdown-menu p {
+    margin: 0px;
+}
+
+.hideOff {
+    display: inherit;
+}
+
+.cardRed {
+    background-color: #f6f6ff;
+    border: solid 2px #9083ff;
+}
+
+.card.active {
+    background-color: #e4fff7;
+    border: solid 2px #6cf3c7;
+}
+
+.card a {
+    color: #ddd;
+    width: 100%;
+    display: block;
+}
+
+.card-text {
+    font-size: 85%;
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.message {
+    margin-top: 50px;
+}
+
+#items .popover-content a {
+    color: #0093ff!important;
+}
+
+#Edit table tr td,
+#Create table tr td {
+    padding-bottom: 10px;
+}
+
+
+/**********************************DROPDOWN***********************************/
+
+.dropdown-menu {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dropdown-menu a {
+    overflow: hidden;
+    outline: none;
+}
+
+.additem input {
+    border: 0;
+    margin: -3px;
+    padding: 3px;
+    outline: none;
+    color: #000;
+    width: 99%;
+}
+
+.additem:hover input {
+    background-color: #f5f5f5;
+}
+
+.additem .check-mark {
+    opacity: 0;
+    z-index: -1000;
+}
+
+.addnewicon {
+    position: relative;
+    padding: 4px;
+    margin: -8px;
+    padding-right: 50px;
+    margin-right: -50px;
+    color: #aaa;
+}
+
+.addnewicon:hover {
+    color: #222;
+}
+
+.showHide {
+    display: inherit;
+    /*background-image:url("../image/eye.png");*/
+    background-image: url("../../../IntWeb/img/viewClose.png");
+    background-size: 20px auto;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.closed {
+    background-image: url("../../../IntWeb/img/view.png");
+}
+
+.lead{
+  color:aqua;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  background-color: transparent;
+  background-image: none;
+  border-color: #28a745;
+}
+

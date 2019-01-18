@@ -1,0 +1,348 @@
+<!doctype html>
+<html data-framework="vue">
+  <head>
+    <title>Passwords</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="js/roboto-and-material-icons-fonts-master/css/roboto.min.css">
+    <link rel="stylesheet" href="js/roboto-and-material-icons-fonts-master/css/material-icons.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Material Kit CSS -->
+    <link href="css/material-kit.min.css?v=2.0.5" rel="stylesheet" />
+    <!--Toastr-->
+    <link href="css/toastr.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/default.css">
+    <!--PhoneGapCSS-->
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />  -->
+  </head>
+  <body>
+      <div id="app">    
+    <nav class="nav-color navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg "  color-on-scroll="100">
+      <div class="container">
+          <div class="navbar-translate">
+              <a class="navbar-brand" href="#">{{Title}}</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav" data-tabs="tabs">
+                <li class="nav-item">
+                  <a class="nav-link active show" href="#passwords" data-toggle="tab" @click="showMain(true)" >
+                    <i class="material-icons">markunread_mailbox</i> {{Title}}
+                  <div class="ripple-container"></div></a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#settings" data-toggle="tab" @click="showMain(true)">
+                      <i class="material-icons">settings</i> Settings
+                    <div class="ripple-container"></div></a>
+                </li>  
+                <form class="form-inline ml-auto" >
+                  <div class="form-group bmd-form-group ">
+                      <label for="searchText" class="bmd-label-floating">Search</label>
+                      <input id="searchText"  type="text"  class="form-control"> 
+                      <button id="search" type="submit" class="btn btn-white btn-raised btn-fab btn-round">
+                        <i class="material-icons">search</i>
+                      </button>                   
+                 </div>
+                </form>                                                           
+              </ul>              
+            </div>                                                      
+      </div>
+    </nav>
+
+
+<div class="page-header header-filter light" data-parallax="true" >
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="brand text-center">
+          <h1>{{Title}}</h1>      
+                           
+         <!-- <button @click="app.stubAction()">Button</button>      -->
+          <h3 class="title text-center">{{desc}}</h3>
+          <button type="button" class="btn btn-color" id="callUpload" @click="jQuery(this).vibrate('short');simulateClick('#upload');">Upload</button>
+          <button type="button" class="btn btn-color" id="callLoadStored" @click="jQuery(this).vibrate('short');loadPassStored();">Load Stored</button>
+          <input type="file" id="upload">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main main-raised">
+  <div class="container" >
+    <div class="section text-center">      
+
+      <!--NAV INICIO-->
+      <div class="card-body ">
+          <div class="tab-content text-center">
+            <div class="tab-pane active show" id="passwords">
+                <h2 class="title text-color">Passwords</h2>
+                <!--INICIA VUE LIST-->
+                <div class="column">                  
+                    <item-component 
+                    v-for="item in items"
+                    v-bind:key="item.id"
+                    v-bind:item="item"                              
+                  /></div>                
+            </div>
+            <div class="tab-pane" id="settings">
+                <h2 class="title text-color">Settings</h2>            
+                  <div class="row">    
+                    <!--*********************************HEADER-FILTER****************************-->  
+                    <div class="col-md-6 ml-auto">
+                        <div class="title">
+                          <h3>Header Black filter</h3>
+                        </div>
+                        
+                        <label>Black filter strength </label>
+                        <div id="sliderHeaderFilter" class="slider"></div>
+                          <h4>Change Header Color</h4>   
+                          <div class="togglebutton">                           
+                              <label>
+                                <input type="checkbox" checked="" v-model="headerColorToggle" class="btn-color">
+                                <span class="toggle"></span>
+                                Header Color
+                              </label>
+                            </div>                                             
+                          <input disabled type="text" class="jscolor" value=""  onchange="app.changeHeaderColor(this.value,true)">
+                      </div>                      
+                    <!--*********************************BACKGROUND****************************-->  
+                    <div class="col-md-6 ml-auto">
+                        <div class="title">
+                          <h3>Background</h3><!--//TODO: HERE-->
+                        </div>
+                        <div class="togglebutton">
+                          <label>
+                            <input type="checkbox" checked="" v-model="backgroundToggle" class="btn-color">
+                            <span class="toggle"></span>
+                            Background
+                          </label>
+                        </div>     
+                      <div class="fixed-plugin">
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg1.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li>
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg2.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg3.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg4.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg5.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg6.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg7.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg8mobile.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg9mobile.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <li class="">
+                          <a class="img-holder switch-trigger" onclick="app.loadBackground(this,true)" >
+                            <img src="img/bg10mobile.jpg" alt="">
+                          <div class="ripple-container"></div></a>
+                        </li>
+                        <div class="clearfix"></div>
+                        </div>
+                      </div>   
+                      <!--******************************OTHER FEATURES*************************-->   
+                      <div class="col-md-6 ml-auto">
+                        <div class="title">
+                          <h3>Other Features</h3>                        
+                        </div>
+                        <a class="btn btn-sm btn-success" href="IntWeb/Items.html">Pass Manager</a>
+                        <a class="btn btn-sm btn-info" href="Pass/Pass.html">Old Pass Loader</a>
+                        <a class="btn btn-sm btn-warning" href="js/Anime/Explode/index.html">Explode</a>
+                      </div>
+                      <!--*********************************THEME****************************-->        
+                    <div class="col-md-6 ml-auto">
+                      <div class="title">
+                        <h3>Theme </h3>
+                      </div>
+                      <div class="fixed-plugin">
+                          <span class="badge filter badge-default" @click=changeTheme('',true) data-color="default"></span>
+                          <span class="badge filter badge-primary" @click=changeTheme('primary',true) data-color="purple"></span>
+                          <span class="badge filter badge-info" @click=changeTheme('info',true) data-color="azure"></span>
+                          <span class="badge filter badge-success" @click=changeTheme('success',true) data-color="green"></span>
+                          <span class="badge filter badge-warning" @click=changeTheme('warning',true) data-color="orange"></span>
+                          <span class="badge filter badge-danger" @click=changeTheme('danger',true) data-color="danger"></span>
+                          <span class="badge filter badge-rose active" @click=changeTheme('rose',true) data-color="rose"></span>  
+                      </div>
+                    </div>                                        
+                    <!--*********************************VIBRATION****************************-->  
+                    <!--<div class="col-md-6 ml-auto">
+                        <div class="title">
+                          <h3>Vibration</h3>
+                        </div>
+                        <p class="h4">Force of vibration of buttons</p>
+                        <div class="row">
+                          <div class="col">
+                          <label>Upload</label>
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCallUpload" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                50ms
+                            </button>
+                            <div class="dropdown-menu text-color" aria-labelledby="dropdownCallUpload">
+                              <!--<a class="dropdown-item" onclick="app.vibrate(this,'#callUpload','20ms')">20ms</a>-->
+                              <!--<a class="dropdown-item active"  >50ms</a>
+                              <a class="dropdown-item" >100ms</a>
+                              <a class="dropdown-item" >500ms</a>
+                              <a class="dropdown-item" >1000ms</a>
+                              <a class="dropdown-item" >2000ms</a>
+                              <a class="dropdown-item" >twice</a>
+                            </div>
+                          </div>
+                        </div>                        
+                    </div>                        
+                    </div>-->
+                    <!--*********************************BADGES****************************-->  
+                    <div class="col-md-6 ml-auto">
+                      <div class="title">
+                        <h3>Reset</h3>                        
+                      </div>
+                      <span class="btn badge badge-pill badge-danger" @click="Store.clearStorage();location.reload();">Reset Config</span>                      
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--NAV FIM-->
+    </div>
+  </div>
+  <!-- Modal -->
+  <item-desc
+    v-bind:Password="Password"    
+  />
+</div>
+
+ 
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="ItemInfoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-color" id="ItemInfoLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-color">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer footer-default" >
+  <div class="container">
+    <nav class="float-left">
+      <ul>
+        <li>
+          <a href="https://demos.creative-tim.com/material-kit/index.html">
+              Material Kit
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright float-right">
+        &copy;
+        <script>
+            document.write(new Date().getFullYear())
+        </script>, made with <i class="material-icons">colorize</i> Material Kit with
+        <a href="https://material.io/tools/icons/?style=baseline" target="blank">Icons</a>.
+    </div>
+  </div>
+</footer>
+
+
+
+      
+  </div>
+<!--Cordova
+<script type="text/javascript" src="../platforms/browser/platform_www/cordova.js"></script>-->
+  <!--   Core JS Files   -->
+<script src="js/material-kit/jquery.min.js" type="text/javascript"></script>
+<script src="js/material-kit/popper.min.js" type="text/javascript"></script>
+<script src="js/material-kit/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="js/material-kit/moment.min.js"></script>
+<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+<script src="js/material-kit/material-kit.min.js?v=2.0.5" type="text/javascript"></script>
+ <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+ <script src="js/material-kit/nouislider.min.js" type="text/javascript"></script>
+<!-- Vue -->
+<script src="js/vue.min.js"></script> 
+<!-- Vibrate -->
+<script src="js/jquery.vibrate.min.js"></script> 
+<!--Anime JS-->
+<script src="js/anime.min.js"></script>
+<!-- AES Crypt -->
+<script src="js/aes.js"></script> 
+<!--On Screen JS-->
+<script type="text/javascript" src="js/on-screen.umd.min.js"></script>
+<!-- My Files -->
+  <script src="js/file.js"></script>
+  <script src="js/json.js"></script>
+  <script src="js/crypt.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/onScreenFn.js"></script>  
+  <script src="js/jscolor.js"></script>
+  <!--Toastr-->
+  <script src="js/toastr.min.js"></script>      
+  <script src="js/app.js"></script>        
+  <!--PhoneGap-->
+  <script type="text/javascript" src="js/index.js"></script>
+  <!--Cordova-->  
+  <script type="text/javascript">  
+  //Cordova.initialize();      
+  </script>
+   
+</body>
+</html>
